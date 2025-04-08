@@ -45,7 +45,7 @@ CREATE TABLE Pedido (
 CREATE TABLE Pagamento (
 	IdPagamento INT PRIMARY KEY IDENTITY,
 	IdPedido INT FOREIGN KEY REFERENCES Pedido(IdPedido),
-	FormaDePagamento INT,
+	FormaDePagamento VARCHAR(50),
 	Status VARCHAR(20), 
 	Data DATETIME
 );
@@ -71,7 +71,7 @@ CREATE TABLE ItemPedido (
 --Aqui ele serve para que voce so escreva as coisas que voce quer ordernar para guardar no Banco de dados, entao nao importa o que voce vai escrever no aqui, 
 --se voce nao selecionar e executar nao vai acontecer nada. 
 
-/*
+/* 
 DROP TABLE ItemPedido;
 DROP TABLE Pagamento;
 DROP TABLE Pedido;
