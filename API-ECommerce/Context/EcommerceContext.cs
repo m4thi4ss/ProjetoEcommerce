@@ -16,7 +16,7 @@ public partial class EcommerceContext : DbContext
     {
     }
 
-    public virtual DbSet<Cliente> Clientes { get; set; }
+    public virtual DbSet<ItemPedido> Clientes { get; set; }
 
     public virtual DbSet<ItemPedido> ItemPedidos { get; set; }
 
