@@ -4,7 +4,7 @@ namespace API_ECommerce.Interfaces
 {
     public interface IProdutoRepository
     {
-        //Metodos
+        //Metodos de CRUD
         //R - Read (Leitura)
         // Retorno
         List<Produto> ListarTodos();

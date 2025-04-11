@@ -4,34 +4,25 @@ using API_ECommerce.Models;
 
 namespace API_ECommerce.Repositories
 {
-    public class ClienteRepository : IClienteRepository
+    public class PedidoRepository : IPedidoRepository
     {
-        //1 - Herdar da Interface
-        //2 - Implementar a Interface
-        //3 - Injetar o Contexto 
         private EcommerceContext _context;
 
-        public ClienteRepository(EcommerceContext context)
+        public PedidoRepository(EcommerceContext context)
         {
             _context = context;
         }
-
-        public void Atualizar(int id, Cliente cliente)
+        public void Atualizar(int id, Pedido pedido)
         {
             throw new NotImplementedException();
         }
 
-        public Cliente BuscarPorEmailSenha(string email, string senha)
+        public Pedido BuscarPorId(int id)
         {
             throw new NotImplementedException();
         }
 
-        public Cliente BuscarPorId(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Cadastrar(Cliente cliente)
+        public void Cadastrar(Pedido pedido)
         {
             throw new NotImplementedException();
         }
@@ -41,7 +32,7 @@ namespace API_ECommerce.Repositories
             throw new NotImplementedException();
         }
 
-        public List<Cliente> ListaTodos()
+        public List<Pedido> ListaTodos()
         {
             throw new NotImplementedException();
         }

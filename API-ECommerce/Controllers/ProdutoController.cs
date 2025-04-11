@@ -26,5 +26,7 @@ namespace API_ECommerce.Controllers
         {
             return Ok(_produtoRepository.ListarTodos());
         }
+
+        //Aqui seria um metodo de pedido e envio da informacao do controllador. Nesse codigo voce esta pedindo para o controllador listar os produtos e ele esta retornando a lista de produtos. 
     }
 }
