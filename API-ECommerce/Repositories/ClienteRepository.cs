@@ -13,7 +13,7 @@ namespace API_ECommerce.Repositories
 
         public ClienteRepository(EcommerceContext context)
         {
-            _context = context;
+            _context = context; 
         }
 
         public void Atualizar(int id, Cliente cliente)

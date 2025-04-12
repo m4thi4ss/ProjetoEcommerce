@@ -1,9 +1,12 @@
 ﻿using API_ECommerce.Context;
 using API_ECommerce.Interfaces;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API_ECommerce.Controllers
 {
+    [Route("api/[controller]")]
+    [ApiController]
     public class ClienteController : ControllerBase
     {
         private readonly EcommerceContext _context;
@@ -15,6 +18,10 @@ namespace API_ECommerce.Controllers
             _clienteRepository = clienteRepository;
         }
 
-
+        [HttpGet]
+        public IActionResult ListarTodos()
+        {
+            return Ok(_clienteRepository.ListaTodos());
+        }
     }
 }

@@ -1,18 +1,21 @@
 ﻿using API_ECommerce.Context;
 using API_ECommerce.Interfaces;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API_ECommerce.Controllers
 {
-    public class ItemPedidoController : Controller
+    [Route("api/[controller]")]
+    [ApiController]
+    public class ItemPedidoController : ControllerBase
     {
-        private readonly EcommerceContext _context;
-        private IItemPedidoRepository _itemPedidoRepository;
+            private readonly EcommerceContext _context;
+            private IItemPedidoRepository _itemPedidoRepository;
 
-        public ItemPedidoController(EcommerceContext context, IItemPedidoRepository itemPedidoRepository)
-        {
-            _context = context;
-            _itemPedidoRepository = itemPedidoRepository;
-        }
+            public ItemPedidoController(EcommerceContext context, IItemPedidoRepository itemPedidoRepository)
+            {
+                _context = context;
+                _itemPedidoRepository = itemPedidoRepository;
+            }
     }
 }

@@ -34,7 +34,7 @@ namespace API_ECommerce.Repositories
 
         public List<Pagamento> ListaTodos()
         {
-            throw new NotImplementedException();
+            return _context.Pagamentos.ToList();
         }
     }
 }
