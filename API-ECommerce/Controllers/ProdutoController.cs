@@ -11,13 +11,11 @@ namespace API_ECommerce.Controllers
     [ApiController]
     public class ProdutoController : ControllerBase
     {
-        private readonly EcommerceContext _context;
         private IProdutoRepository _produtoRepository;
 
-        public ProdutoController(EcommerceContext context)
+        public ProdutoController(IProdutoRepository produtoRepository)
         {
-            _context = context;
-            _produtoRepository = new ProdutoRepository(_context);
+            _produtoRepository = produtoRepository;
         }
 
         // GET 
@@ -37,7 +35,7 @@ namespace API_ECommerce.Controllers
             _produtoRepository.Cadastrar(prod);
 
             //2- salvo a alteracao (Padrao)
-            _context.SaveChanges();
+            //O cadastrar foi para o repository por que ele que esta responsavel 
 
             //3 - Retorno o resultado 
             //201 - Created

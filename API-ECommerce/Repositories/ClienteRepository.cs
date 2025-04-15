@@ -43,7 +43,7 @@ namespace API_ECommerce.Repositories
 
         public List<Cliente> ListaTodos()
         {
-            throw new NotImplementedException();
+            return _context.Clientes.ToList();
         }
     }
 }

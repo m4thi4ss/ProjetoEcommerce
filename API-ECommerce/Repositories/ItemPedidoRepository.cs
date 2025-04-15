@@ -35,7 +35,7 @@ namespace API_ECommerce.Repositories
 
         public List<ItemPedido> ListaTodos()
         {
-            throw new NotImplementedException();
+            return _context.ItemPedidos.ToList();
         }
     }
 }
