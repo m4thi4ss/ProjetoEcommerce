@@ -18,7 +18,19 @@ namespace API_ECommerce.Repositories
 
         public void Atualizar(int id, Cliente cliente)
         {
-            throw new NotImplementedException();
+            Cliente clienteEncontrado = _context.Clientes.Find(id);
+
+            if (clienteEncontrado == null)
+            {
+                throw new Exception();
+            }
+            clienteEncontrado.Email = cliente.Email;
+            clienteEncontrado.Telefone = cliente.Telefone;
+            clienteEncontrado.Endereco = cliente.Endereco;
+            clienteEncontrado.NomeCompleto = cliente.NomeCompleto;
+            clienteEncontrado.DataCasdatro = cliente.DataCasdatro;
+
+            _context.SaveChanges();
         }
 
         public Cliente BuscarPorEmailSenha(string email, string senha)
@@ -28,17 +40,28 @@ namespace API_ECommerce.Repositories
 
         public Cliente BuscarPorId(int id)
         {
-            throw new NotImplementedException();
+            return _context.Clientes.FirstOrDefault(p => p.IdCliente == id);
         }
 
         public void Cadastrar(Cliente cliente)
         {
-            throw new NotImplementedException();
+            _context.Clientes.Add(cliente);
+            _context.SaveChanges();
         }
 
         public void Deletar(int id)
         {
-            throw new NotImplementedException();
+            Cliente clienteEncontrado = _context.Clientes.Find(id);
+
+            if (clienteEncontrado == null)
+            {
+                throw new Exception();
+            }
+            //Caso eu encontre o produto, remove ele 
+            _context.Clientes.Remove(clienteEncontrado);
+
+            //Esse e o metodo para salvar no banco de dados.
+            _context.SaveChanges();
         }
 
         public List<Cliente> ListaTodos()

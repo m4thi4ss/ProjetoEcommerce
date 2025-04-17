@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\fic\\Downloads\\Projeto E-commerce\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{381A3C2F-6689-42BE-A793-F88F945E9ED4}|API-ECommerce\\API-ECommerce.csproj|c:\\users\\fic\\downloads\\projeto e-commerce\\api-ecommerce\\repositories\\clienterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{381A3C2F-6689-42BE-A793-F88F945E9ED4}|API-ECommerce\\API-ECommerce.csproj|solutionrelative:api-ecommerce\\repositories\\clienterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{381A3C2F-6689-42BE-A793-F88F945E9ED4}|API-ECommerce\\API-ECommerce.csproj|c:\\users\\fic\\downloads\\projeto e-commerce\\api-ecommerce\\controllers\\produtocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{381A3C2F-6689-42BE-A793-F88F945E9ED4}|API-ECommerce\\API-ECommerce.csproj|solutionrelative:api-ecommerce\\controllers\\produtocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{381A3C2F-6689-42BE-A793-F88F945E9ED4}|API-ECommerce\\API-ECommerce.csproj|c:\\users\\fic\\downloads\\projeto e-commerce\\api-ecommerce\\controllers\\pedidocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{381A3C2F-6689-42BE-A793-F88F945E9ED4}|API-ECommerce\\API-ECommerce.csproj|solutionrelative:api-ecommerce\\controllers\\pedidocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,12 +27,38 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "ClienteRepository.cs",
+              "DocumentMoniker": "C:\\Users\\fic\\Downloads\\Projeto E-commerce\\API-ECommerce\\Repositories\\ClienteRepository.cs",
+              "RelativeDocumentMoniker": "API-ECommerce\\Repositories\\ClienteRepository.cs",
+              "ToolTip": "C:\\Users\\fic\\Downloads\\Projeto E-commerce\\API-ECommerce\\Repositories\\ClienteRepository.cs*",
+              "RelativeToolTip": "API-ECommerce\\Repositories\\ClienteRepository.cs*",
+              "ViewState": "AgIAABEAAAAAAAAAAAAuwB8AAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-17T00:22:25.492Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PedidoController.cs",
+              "DocumentMoniker": "C:\\Users\\fic\\Downloads\\Projeto E-commerce\\API-ECommerce\\Controllers\\PedidoController.cs",
+              "RelativeDocumentMoniker": "API-ECommerce\\Controllers\\PedidoController.cs",
+              "ToolTip": "C:\\Users\\fic\\Downloads\\Projeto E-commerce\\API-ECommerce\\Controllers\\PedidoController.cs",
+              "RelativeToolTip": "API-ECommerce\\Controllers\\PedidoController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T22:52:12.564Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "ProdutoController.cs",
               "DocumentMoniker": "C:\\Users\\fic\\Downloads\\Projeto E-commerce\\API-ECommerce\\Controllers\\ProdutoController.cs",
               "RelativeDocumentMoniker": "API-ECommerce\\Controllers\\ProdutoController.cs",
               "ToolTip": "C:\\Users\\fic\\Downloads\\Projeto E-commerce\\API-ECommerce\\Controllers\\ProdutoController.cs",
               "RelativeToolTip": "API-ECommerce\\Controllers\\ProdutoController.cs",
-              "ViewState": "AgIAADwAAAAAAAAAAAAuwEQAAAA3AAAAAAAAAA==",
+              "ViewState": "AgIAABoAAAAAAAAAAAAYwEkAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-12T00:17:15.074Z",
               "EditorCaption": ""
