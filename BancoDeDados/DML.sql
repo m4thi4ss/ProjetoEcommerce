@@ -10,10 +10,10 @@ VALUES
 
 --Lembrando que texto ou palavras e igual string, precisa ter os '' e os numeros nao precisa.
 
-INSERT INTO Cliente (NomeCompleto, Email, Telefone, Endereco, DataCasdatro)
+INSERT INTO Cliente (NomeCompleto, Email, Telefone, Endereco, DataCasdatro, Senha)
 VALUES
-('Vinicio Santos', 'vinicio@senai.br', '(11) 999994444', 'Rua Niteroi, 180 - Sao Paulo/SP', '04/05/2025'),
-('Saulo Santos', 'saulo@senai.br', '(11)22222333444', 'Rua Niteroi, 250 - Sao Paulo/SP', '01/05/2025')
+('Vinicio Santos', 'vinicio@senai.br', '(11) 999994444', 'Rua Niteroi, 180 - Sao Paulo/SP', '04/05/2025', '123456'),
+('Saulo Santos', 'saulo@senai.br', '(11)22222333444', 'Rua Niteroi, 250 - Sao Paulo/SP', '01/05/2025', '123456')
 
 INSERT INTO Pedido (IdCliente,DataPedido , Status, ValorTotal)
 VALUES

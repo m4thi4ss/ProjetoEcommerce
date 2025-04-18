@@ -27,44 +27,48 @@ CREATE TABLE Cliente (
 -- INDENTITY - GERADA AUTOMATICAMENTE, SERVE PARA QUANDO VIM AS INFORMACOES E ELE VAI COLOCAR 1, 2, 3 AUTOMATICAMENTE. ELE SO GERA SO SEQUENCIA DE NUMEROS 123456 
 --E ASSIM POR DIANTE.
 	IdCliente INT PRIMARY KEY IDENTITY, 
-	NomeCompleto VARCHAR(150), 
-	Email VARCHAR(100),
-	Telefone VARCHAR(20),
+	NomeCompleto VARCHAR(150) NOT NULL, --O not null ELE SERVE PARA QUE NAO TENHA A POSSIBILIDADE DE SER CADASTRAR SEM O NOME.
+	Email VARCHAR(100) NOT NULL UNIQUE, --UNIQUE significa que cada e-mail e unico, se colocar o mesmo para outro informacoes o banco barra.
+	Telefone VARCHAR(20), 
 	Endereco VARCHAR(255),
+	Senha VARCHAR(255) NOT NULL,
 	DataCasdatro DATE
 	); -- Tem que fechar e abrir parenteses, pois o SQL ele nao avisa, entao tem que ficar se nao funciona o codigo.
 
 CREATE TABLE Pedido (
 	IdPedido INT PRIMARY KEY IDENTITY,
-	DataPedido DATE,
-	Status VARCHAR(20),
+	DataPedido DATE NOT NULL,
+	Status VARCHAR(20) NOT NULL,
 	ValorTotal DECIMAL(18, 6),
-	IdCliente INT FOREIGN KEY REFERENCES Cliente(IdCliente)
+	IdCliente INT FOREIGN KEY REFERENCES Cliente(IdCliente) NOT NULL
 );
 
 CREATE TABLE Pagamento (
 	IdPagamento INT PRIMARY KEY IDENTITY,
-	IdPedido INT FOREIGN KEY REFERENCES Pedido(IdPedido),
-	FormaDePagamento VARCHAR(50),
-	Status VARCHAR(20), 
-	Data DATETIME
+	IdPedido INT FOREIGN KEY REFERENCES Pedido(IdPedido) NOT NULL,
+	FormaDePagamento VARCHAR(50) NOT NULL,
+	Status VARCHAR(20) NOT NULL, 
+	Data DATETIME NOT NULL
 );
 CREATE TABLE Produto (
 	IdProduto INT PRIMARY KEY IDENTITY,
-	Nome VARCHAR(150),
+	Nome VARCHAR(150) NOT NULL,
 	Descricao VARCHAR(255),
-	Preco DECIMAL(18 , 6),
-	EstoqueDisponivel INT,
-	Categoria VARCHAR(100),
+	Preco DECIMAL(18 , 6) NOT NULL,
+	EstoqueDisponivel INT NOT NULL,
+	Categoria VARCHAR(100) NOT NULL,
 	Imagem VARCHAR(255),
 );
 
 CREATE TABLE ItemPedido (
 	IdItemPedido INT PRIMARY KEY IDENTITY,
-	IdPedido INT FOREIGN KEY REFERENCES Pedido(IdPedido),
-	IdProduto INT FOREIGN KEY REFERENCES Produto(IdProduto),
-	Quantidade INT,
+	IdPedido INT FOREIGN KEY REFERENCES Pedido(IdPedido) NOT NULL,
+	IdProduto INT FOREIGN KEY REFERENCES Produto(IdProduto) NOT NULL,
+	Quantidade INT NOT NULL
 );
+
+--ALTER TABLE Cliente ALTER COLUMN NomeCompleto VARCHAR(255) NOT NULL (Esse serve quando você quer atualizar as tabelas sem apagar os dados)
+
 
 --Para fazer o delte de uma tabela voce precisa verifica se tem uma referencia, se tiver voce tem que apagar. Para apagar tabela, voce tem que seguir uma ordem, 
 --a ordem seria o que tem mais referencia. 

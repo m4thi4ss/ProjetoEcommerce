@@ -43,7 +43,14 @@ namespace API_ECommerce.Repositories
 
         public void Deletar(int id)
         {
-            Pagamento pagamento = _context.Pagamentos.Find(
+            Pagamento pagamento = _context.Pagamentos.Find(id);
+
+            if(pagamento == null)
+            {
+                throw new Exception();
+            }
+            _context.Pagamentos.Remove(pagamento);
+            _context.SaveChanges(true);
         }
 
         public List<Pagamento> ListaTodos()

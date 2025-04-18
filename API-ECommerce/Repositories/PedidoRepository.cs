@@ -6,12 +6,6 @@ namespace API_ECommerce.Repositories
 {
     public class PedidoRepository : IPedidoRepository
     {
-        private EcommerceContext _context;
-
-        public PedidoRepository(EcommerceContext context)
-        {
-            _context = context;
-        }
         public void Atualizar(int id, Pedido pedido)
         {
             throw new NotImplementedException();
@@ -34,7 +28,6 @@ namespace API_ECommerce.Repositories
 
         public List<Pedido> ListaTodos()
         {
-            return _context.Pedidos.ToList();
+            throw new NotImplementedException();
         }
     }
-}
